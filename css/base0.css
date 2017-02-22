@@ -1,0 +1,179 @@
+/**通用设定|与屏幕大小无关**/
+/**body**/
+body{
+	font-size:1em;
+	font-family:"Microsoft Yahei";
+	margin-left:auto;
+	margin-right:auto;
+}
+nav,
+article{
+	margin-top:2px;
+}
+ul{
+	list-style-type:none;
+}
+nav:after,
+article:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+/**导航条**/
+nav{
+	position:relative;
+	border-radius:5px;
+	font-size:1.2em;
+	background-color:#074a51;
+	color:#ffffff;
+}
+nav>ul,
+nav>ul>li{
+	float:left;
+	padding-left:2%;
+}
+nav>ul{
+	width:64%;
+}
+nav input{
+	/*display:inline-block;*/
+	float:right;
+	width:30%;
+	margin-right:2%;
+	font-size:1.3em;
+}
+
+/**主体部分**/
+article{
+	position:relative;
+}
+.left,
+.center,
+.right{
+	margin-top:4px;
+}
+.center,
+.right{
+	padding:2% 2%
+}
+/**左侧栏**/
+.left{
+	float:left;
+	background:#580760;
+	border-radius:5px;
+}
+.left p{
+	margin:10% auto;
+	padding:5% 5%;
+	width:70%;
+	text-align:center;
+	background:#fff;
+}
+
+/**中间主体**/
+.center{
+	float:left;
+	width:50%;
+	background:#f9ba52;
+	border-radius:5px;
+}
+.center>img{
+	width:23%;
+}
+
+/**右侧栏**/
+.right{
+	float:left;
+	width:25%;
+	background:#5A5708;
+	border-radius:5px;
+	color:#fff;
+}
+
+
+/**footer页脚**/
+footer{
+	margin-top:4px;
+	border-width:2px;
+	border-style:solid none none none;
+	border-top-color:#074a51;
+	text-align:center;
+}
+
+
+/**PC、大屏幕设备**/
+@media only screen and (min-width:900px){
+	body{
+		width:900px;
+	}
+	nav input{
+		margin-top:1.5%;
+	}
+	.left{
+		width:18%;
+	}
+	.center{
+		margin-left:1%;
+		margin-right:1%;
+		width:54%;
+	}
+	.right{
+		width:18%;
+	}
+}
+
+/**中等屏幕设备**/
+@media only screen and (max-width:900px) and (min-width:600px){
+	body{
+		width:100%;
+	}
+	nav input{
+		margin-top:2%;
+	}
+	.left{
+		width:19%;
+	}
+	.center{
+		float:right;
+		margin-left:1%;
+		margin-right:0;
+		width:76%;
+	}
+	.center>img{
+		width:48%;
+	}
+	.right{
+		float:right;
+		width:76%;
+	}
+}
+
+
+/**小屏幕设备**/
+@media only screen and (max-width:600px){
+	body{
+		width:100%;
+	}
+	nav input{
+		margin-top:3%;
+	}
+	.left{
+		width:100%;
+	}
+	.left p{
+		margin:5% auto;
+		padding:2% 5%;
+	}
+	.center{
+		width:100%;
+		margin-left:0;
+		margin-right:0;
+	}
+	.center>img{
+		width:48%;
+	}
+	.right{
+		width:100%;
+	}
+}

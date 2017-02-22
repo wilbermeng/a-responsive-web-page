@@ -1,0 +1,31 @@
+/*所有情况融合在一个CSS文件中*/
+/*相同部分*/
+body{
+	background:#faf;
+}
+#container{
+	border:1px solid #ada;
+}
+
+/*不同部分*/
+/*小屏设备*/
+@media screen and (max-width:600px){
+	#container{
+		width:350px;
+		background:#afa;
+	}
+}
+/*中屏设备*/
+@media screen and (max-width:800px) and (min-width:600px){
+	#container{
+		width:600px;
+		background:#bfb;
+	}
+}
+/*大屏、PC设备*/
+@media screen and (min-width:800px){
+	#container{
+		width:800px;
+		background:#cfc;
+	}
+}
